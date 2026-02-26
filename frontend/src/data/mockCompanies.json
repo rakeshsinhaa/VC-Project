@@ -1,0 +1,37 @@
+[
+    {
+        "id": "1",
+        "name": "Vercel",
+        "website": "vercel.com",
+        "industry": "Developer Tools",
+        "stage": "Series D"
+    },
+    {
+        "id": "2",
+        "name": "Stripe",
+        "website": "stripe.com",
+        "industry": "Fintech",
+        "stage": "Pre-IPO"
+    },
+    {
+        "id": "3",
+        "name": "OpenAI",
+        "website": "openai.com",
+        "industry": "Artificial Intelligence",
+        "stage": "Late Stage"
+    },
+    {
+        "id": "4",
+        "name": "Scale AI",
+        "website": "scale.com",
+        "industry": "Data Infrastructure",
+        "stage": "Series F"
+    },
+    {
+        "id": "5",
+        "name": "Hugging Face",
+        "website": "huggingface.co",
+        "industry": "Machine Learning",
+        "stage": "Series D"
+    }
+]

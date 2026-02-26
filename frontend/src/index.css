@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+@theme {
+  --color-slate-50: #f8fafc;
+  --color-slate-900: #0f172a;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-slate-950, #020617);
+  color: var(--color-slate-300, #cbd5e1);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom premium hover animations - Dark Mode */
+@utility premium-card {
+  background-color: var(--color-slate-900, #0f172a);
+  border: 1px solid var(--color-slate-800, #1e293b);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.5);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.premium-card:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.5), 0 4px 6px -4px rgb(0 0 0 / 0.5);
+  border-color: var(--color-indigo-500, #6366f1);
+  transform: translateY(-0.125rem);
+}
+
+@utility premium-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 200ms;
+}
+
+@utility premium-button-primary {
+  @apply premium-button;
+  background-color: var(--color-indigo-600, #4f46e5);
+  color: white;
+  border: none;
+}
+
+.premium-button-primary:hover {
+  background-color: var(--color-indigo-500, #6366f1);
+  box-shadow: 0 4px 14px 0 rgb(99 102 241 / 0.39);
+}
+
+.premium-button-primary:active {
+  transform: scale(0.95);
+}
+
+@utility premium-button-secondary {
+  @apply premium-button;
+  background-color: var(--color-slate-800, #1e293b);
+  color: var(--color-slate-200, #e2e8f0);
+  border: 1px solid var(--color-slate-700, #334155);
+}
+
+.premium-button-secondary:hover {
+  background-color: var(--color-slate-700, #334155);
+  border-color: var(--color-slate-600, #475569);
+  color: white;
+}
+
+.premium-button-secondary:active {
+  transform: scale(0.95);
+}
