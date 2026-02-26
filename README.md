@@ -72,3 +72,28 @@ The frontend runs locally, typically on `http://localhost:5173`.
 4. The frontend will call `POST /enrich` on the backend, which will scrape the target URL to extract text, the site's favicon, and banner image.
 5. The backend runs the text through the Gemini 2.5 Flash model and securely returns a structured summary, keywords, and detected signals without exposing the API key on the client.
 6. To clean up your pipeline, click the trash icon on the main table row or on the company profile header to delete a target.
+
+---
+
+## Deployment Guide
+
+This project is configured to be deployed with **Render** (Backend) and **Vercel** (Frontend).
+
+### 1. Deploy the Backend (Render)
+1. Push your repository to GitHub.
+2. Create a **New Web Service** on Render.
+3. Configure settings:
+   - **Root Directory**: `backend`
+   - **Environment**: Python 3
+   - **Build Command**: `pip install -r requirements.txt`
+   - **Start Command**: `bash start.sh`
+4. Add the `GEMINI_API_KEY` to your environment variables on Render.
+5. Deploy and copy the live Render URL.
+
+### 2. Deploy the Frontend (Vercel)
+1. In Vercel, create a **New Project** and import your GitHub repository.
+2. Configure settings:
+   - **Root Directory**: `frontend`
+   - **Framework Preset**: Vite (should be auto-detected)
+3. Add the `VITE_API_URL` to your environment variables on Vercel. **Set this to your live Render backend URL** (without a trailing slash, e.g., `https://vc-backend.onrender.com`).
+4. Deploy the project. The frontend will automatically route requests to your hosted backend.
