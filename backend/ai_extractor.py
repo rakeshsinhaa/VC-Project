@@ -63,7 +63,7 @@ async def extract_company_data(url: str, text: str, icon_url: str = None, banner
             banner_url=banner_url
         )
     except Exception as e:
-        print(f"AI Extraction error for {url}: {e}")
+        print(f"AI Extraction error for {url}: {repr(e)}")
         # Return fallback mock data if LLM call fails
         return EnrichmentResponse(
             summary="Failed to analyze company using AI.",
