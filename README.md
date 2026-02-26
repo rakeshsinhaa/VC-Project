@@ -9,7 +9,6 @@ This project is a minimum viable product for a Venture Capital intelligence plat
 - **Data Pattern**: The frontend only fetches data. All scraping and AI API calls are securely performed server-side on the backend.
 
 ## Prerequisites
-- Node.js (v18+)
 - Python (v3.10+)
 - A Gemini API Key from Google AI Studio
 
